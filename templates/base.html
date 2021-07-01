@@ -49,6 +49,12 @@
         >
             <span> About me </span>
         </a>
+        &nbsp;&nbsp;&nbsp;
+        <a {% if current_path is containing("/contact") %}class="nav-item active"{% else %}class="nav-item"{% endif %}
+            {% if lang == "en" %} href="{{ config.base_url ~ '/contact' }}" {% else %} href="{{ config.base_url ~ '/' ~ lang ~ '/contact'}}" {% endif %}
+        >
+            <span> Contact </span>
+        </a>
       </div>
     </nav>
     <main class="container">
