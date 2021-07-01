@@ -55,7 +55,7 @@
       {% block content %} {% endblock %}
     </main>
     <footer class="footer">
-      <span class="copyright">©</span>&nbsp;2021 - Nantes
+      <span class="copyright">©</span>&nbsp; {{ now() | date(format="%Y") }}
     </footer>
   </div>
 </body>
